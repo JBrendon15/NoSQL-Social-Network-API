@@ -12,5 +12,9 @@ const userSchema = new mongoose.Schema({
         unique: true,
         required: true,
         
-    }
-})
+    },
+    thoughts: [],
+    friends: [],
+});
+
+module.exports = userSchema;
