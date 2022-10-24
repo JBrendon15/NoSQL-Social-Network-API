@@ -26,11 +26,11 @@ const thoughtSchema = new Schema({
     id: false,
 }
 );
-
+//Create virtual reactionCount
 thoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });
-
+//Create thoughts model
 const Thought = model('thoughts', thoughtSchema);
 
 module.exports = Thought;
