@@ -15,6 +15,7 @@ const thoughtSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
+
     },
     reactions: [reactionSchema],
 },
@@ -30,4 +31,6 @@ thoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });
 
-module.exports = thoughtSchema;
+const Thought = model('thoughts', thoughtSchema)
+
+module.exports = Thought;
