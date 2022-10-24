@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const {Schema, model} = require('mongoose');
 
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
     username: { 
         type: String, 
         unique: true, 
@@ -11,10 +11,19 @@ const userSchema = new mongoose.Schema({
         type: String,
         unique: true,
         required: true,
+        validate: {
+            validator: () => Promise.resolve(false),
+            message: 'Please enter a valid email address.'
+        }
         
     },
-    thoughts: [],
-    friends: [],
+    thoughts: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'thought',
+        }
+    ],
+    friends: [ this ],
 });
 
 module.exports = userSchema;
