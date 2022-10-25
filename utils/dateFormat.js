@@ -1,4 +1,5 @@
 module.exports = {
+    //Helper function to display time in specific format
     format_date: (date) => {
        let newDate = new Date(date).toDateString();
        let month = newDate.split(' ')[1];
