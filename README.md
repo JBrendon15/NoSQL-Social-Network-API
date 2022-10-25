@@ -18,7 +18,7 @@ Right click the 'server.js' file and click 'Open in integrated terminal
 ```
 npm start
 ```
-[Tutorial Video]()
+[Tutorial Video](https://www.awesomescreenshot.com/video/11955926?key=c382f6866fa46230854fa21faaa9a212)
 
 ## License
 
